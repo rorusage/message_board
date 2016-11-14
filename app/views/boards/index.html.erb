@@ -15,7 +15,7 @@
       <% @boards.each do |board| %>
         <tr>
           <td>#</td>
-          <td><%= board.title %></td>
+          <td><%= link_to(board.title, board_path(board)) %></td>
           <td><%= board.description %></td>
           <td>
             <%= link_to("Edit", edit_board_path(board), class: "btn btn-sm btn-default")%>
